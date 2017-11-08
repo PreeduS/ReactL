@@ -17,29 +17,31 @@ class PropsEx extends React.Component{
   constructor(){
     super();
     this.state = {list:['first']};
+ 
+  }
+ 
+  listStatePush(){
+    var newList = this.state.list;
+    newList.push('zzz');   
+    this.setState( {list: newList} );
   }
 
+
   render(){
-    const arr = this.state.list;
-    var timeOut = setTimeout(()=>{
-        var newList = this.state.list;
-        newList.push('zzz');
-        this.setState( {list: newList} );
-    },1500);
+    const listArr = this.state.list;
 
-    if(arr.length >= 5){
-        clearTimeout(timeOut);
-    }
-
+ 
     return (
       <div>
          on PropsEx <br />
     
-        {arr.map( (el,i) => <div key = {i} >el</div> )}
+         <b onClick = {this.listStatePush.bind(this)} >listStatePush</b>
+
+        {listArr.map( (el,i) => <div key = {i} >el</div> )}
 
         <br /><br />
         InnerComponent:
-        <InnerComponent propA = {arr} />
+        <InnerComponent propA = {listArr} />
 
       </div>  
     )  

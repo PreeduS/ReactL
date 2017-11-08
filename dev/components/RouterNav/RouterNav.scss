@@ -1,0 +1,24 @@
+$menuWidth :240px;
+
+#RouterNav{
+    border-right:1px solid gray;
+    width:$menuWidth;
+    height:100%;
+    display:block;
+    background: rgb(247, 247, 247);
+
+    a{
+        display:block;
+    }
+}
+
+#MainView{
+   
+    position:absolute;
+    left: $menuWidth;
+    top:0px;
+    right:0px;
+    height:100%;
+    padding-left:10px;
+    background: rgb(251, 251, 251);
+}

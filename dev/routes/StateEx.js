@@ -4,27 +4,26 @@ import React from 'react';
 class StateEx extends React.Component{
   constructor(){
     super();
-    this.state = {list:['first']};
+    this.state = { list:['first'] };
+
   }
 
+  listStatePush(){
+    var newList = this.state.list;
+    newList.push('zzz');   
+    this.setState( {list: newList} );
+  }
+
+
   render(){
-    const arr = this.state.list;
-    var timeOut = setTimeout(()=>{
-        var newList = this.state.list;
-        newList.push('zzz');
-        this.setState( {list: newList} );
-    },1500);
-
-    if(arr.length >= 5){
-        clearTimeout(timeOut);
-    }
-
+    var listArr = this.state.list;
     return (
       <div>
          on StateEx <br />
+   
   
-
-        {arr.map( (el,i) => <div key = {i} >el</div> )}
+        <b onClick = {this.listStatePush.bind(this)} >listStatePush</b>
+        {listArr.map( (el,i) => <div key = {i} >{el}</div> )}
 
       </div>  
     )  
@@ -32,3 +31,4 @@ class StateEx extends React.Component{
 }
 
 export default StateEx;
+
