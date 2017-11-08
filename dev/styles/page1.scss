@@ -1,0 +1,15 @@
+
+$someColor: blue;
+
+.page1{
+  color: $someColor;
+  border:1px solid red;
+  max-width:400px;
+  margin-bottom:20px;
+  .cssBgImg{
+   
+    height:200px;
+    max-width:300px;
+    border:1px solid blue;
+  }
+}

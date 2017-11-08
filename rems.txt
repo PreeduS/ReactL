@@ -1,0 +1,36 @@
+npm view <package-name> version
+
+npm install webpack -g
+
+npm install --save react react-dom
+
+npm install --save-dev babel-cli babel-core babel-loader babel-preset-react babel-preset-es2015
+
+npm install --save-dev style-loader css-loader sass-loader node-sass       
+		//- on js file - import 'css/main.css'; - inline css include
+		
+npm install --save-dev html-loader html-webpack-plugin file-loader
+npm install --save-dev clean-webpack-plugin
+
+
+
+npm install webpack-dev-server --save-dev  
+
+
+npm install react-router-dom --save
+
+npm install webpack --save-dev
+
+
+npm install jquery --save
+
+
+
+//-------------------
+
+npm install --save-dev babel-cli					//instead of babel  (deprecated)
+
+//-------------------
+
+npm install --save-peer webpack
+npm install --save-dev webpack
