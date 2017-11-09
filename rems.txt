@@ -22,6 +22,10 @@ npm install react-router-dom --save
 npm install webpack --save-dev
 
 
+
+npm install --save prop-types
+
+
 npm install jquery --save
 
 

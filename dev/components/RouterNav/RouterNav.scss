@@ -9,8 +9,20 @@ $menuWidth :240px;
 
     a{
         display:block;
+        text-decoration:none;
+        padding:2px 15px;
+        color:black;
+
+       
+
+        &.routeActive{
+            text-decoration:underline;
+        }
     }
+
 }
+
+
 
 #MainView{
    

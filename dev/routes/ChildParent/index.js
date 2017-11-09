@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types'; 
 
 class InnerChildParent extends React.Component{
 
@@ -31,7 +31,7 @@ class outerChildParent extends React.Component{
     }
     parentFunction(data){
       console.log('parentFunction: ' ,data );
-        this.setState({data:'update'});
+        this.setState({data: data});
  
     }
 
@@ -52,6 +52,10 @@ class outerChildParent extends React.Component{
         )  
       }
     }
+
+InnerChildParent.propTypes = {
+  parentFunction: PropTypes.func
+}
 
 
 export default outerChildParent;

@@ -8,6 +8,7 @@ import Basics from '../../routes/Basics';
 import StateEx from '../../routes/StateEx';
 import PropsEx from '../../routes/PropsEx';
 import outerChildParent from '../../routes/ChildParent';
+import FormRef from '../../routes/FormRef';
 
 
 //Styles
@@ -19,12 +20,13 @@ const RouterNav = () =>(
         <div >
        
           <div id = "RouterNav">
-            <NavLink exact activeClassName = "routeActive" to="Home" >Home</NavLink>
-            <NavLink activeClassName = "routeActive" to="Page1" >Page1</NavLink>    
-            <NavLink activeClassName = "routeActive" to="Basics" >Basics</NavLink>    
-            <NavLink activeClassName = "routeActive" to="StateEx" >StateEx</NavLink>    
-            <NavLink activeClassName = "routeActive" to="PropsEx" >PropsEx</NavLink>    
-            <NavLink activeClassName = "routeActive" to="outerChildParent" >outerChildParent</NavLink>  
+            <NavLink exact activeClassName = "routeActive" to="/Home" >Home</NavLink>
+            <NavLink activeClassName = "routeActive" to="/Page1" >Page1</NavLink>    
+            <NavLink activeClassName = "routeActive" to="/Basics" >Basics</NavLink>    
+            <NavLink activeClassName = "routeActive" to="/StateEx" >StateEx</NavLink>    
+            <NavLink activeClassName = "routeActive" to="/PropsEx" >PropsEx</NavLink>    
+            <NavLink activeClassName = "routeActive" to="/outerChildParent" >outerChildParent</NavLink>  
+            <NavLink activeClassName = "routeActive" to="/FormRef" >FormRef</NavLink>  
           </div>
 
           <div id = "MainView">
@@ -35,6 +37,7 @@ const RouterNav = () =>(
               <Route path="/StateEx" component = {StateEx} />
               <Route path="/PropsEx" component = {PropsEx} />
               <Route path="/outerChildParent" component = {outerChildParent} />
+              <Route path="/FormRef" component = {FormRef} />
               <Route render = { () => <b>404 Not found.</b> }  />
 
             </Switch>   
